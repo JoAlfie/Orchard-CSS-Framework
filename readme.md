@@ -54,4 +54,66 @@ Flexbox is buggy, Bootstrap is bloated - meet the answer.
 .breen-class {
   color: @breen;
 }
+
+.another-breen-class {
+	border: solid 3px @breen;
+}
 ```
+4. Update exisiting variables to match site design
+```
+@mainfontcolor: @dark-grey;
+@mainfontfamily: 'Arial', sans-serif;
+@linkcolor: @breen;
+```
+
+5. Create new .less files for all other site styles, and link them in Imports at the top of styles.less
+```
+// IMPORTS
+@import "normalize";
+@import "base";
+@import "less-grid";
+@import "utilities";
+
+@import "header";
+@import "footer";
+@import "generic-page";
+```
+
+### The Grid
+The grid is designed to have as flat a HTML structure as possible. Unlike Bootstrap & Flexbox Grid, rows are not needed inside containers. This allows for more flexibility in container width and setup.
+
+```
+<div class="container">
+	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+		<p>Col 1</p>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+		<p>Col 2</p>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+		<p>Col 3</p>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+		<p>Col 4</p>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+		<p>Col 5</p>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+		<p>Col 6</p>
+	</div>
+</div>
+```
+
+#### Containers:
+
+The class `.container` provides the flexbox wrapper for the columns.
+
++ `.cols-middle` - vertically centre align columns inside container
++ `.cols-start` - left align / flexbox start align columns
++ `.cols-end` - right align / flexbox end align columns
++ `.cols-center` - horizontally centre align columns
++ `.cols-sp-between` - arrange columns with equal space between (pushed right to edges of container)
++ `.cols-sp-around` - arrange columns with equal space around (including between edge of container and edge of column)
++ `.reverse-row` - reverse direction of columns from html structure
+
