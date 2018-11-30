@@ -183,4 +183,23 @@ Like Flexbox Grid & Bootstrap, columns can be offset by `x` columns: `.col-{brea
 
 **Auto Size Columns:**
 
-The class `.col-{breakpoint-auto}` will size columns based on the number in the container. To set a minimum width on these columns (for example, to have four columns per row, but have the columns fill all available space if there are less than four) use the class `.col-{breakpoint}-min-{x}`
+The class `.col-{breakpoint}-auto` will size columns based on the number in the container. To set a minimum width on these columns (for example, to have four columns per row, but have the columns fill all available space if there are less than four) use the class `.col-{breakpoint}-min-{x}`
+
+#### Utility Classes:
+
+These classes can be used on any element, for breakpoint-specific controls.
+
++ `.fw` - sets width and max-width to 100%
++ `.fw-{breakpoint}` - set 'fw' from specific breakpoint
+
++ `.text-left` - text align left
++ `.text-left-{breakpoint}`
+
++ `.text-right` - text align right
++ `.text-right-{breakpoint}`
+
++ `.text-center` - text align center
++ `.text-center-{breakpoint}`
+
++ `.visible-{breakpoint}` - display: block
++ `.hidden-{breakpoint}` - display: none
