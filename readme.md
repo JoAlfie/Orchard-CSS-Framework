@@ -105,9 +105,30 @@ The grid is designed to have as flat a HTML structure as possible. Unlike Bootst
 </div>
 ```
 
+#### Mobile First Breakpoints:
+The grid starts at mobile, and extra css can be added as the screen size increases. This means less css has to be read for smaller devices.
+
+```
+/* applied to everything */
+.universal-class {}
+
+/* xs is the base css, before media queries kick in */
+.class-xs {}
+
+@media (min-width: @sm) {
+	/* this class applies to everything bigger than the @sm breakpoint, until it is overridden by the same class at a bigger breakpoint */
+	.class-sm {}
+}
+@media (min-width: @md) {
+	/* this will override .class-sm */
+	.class-md {}
+}
+
 #### Containers:
 
 The class `.container` provides the flexbox wrapper for the columns.
+
+Utility classes for containers:
 
 + `.cols-middle` - vertically centre align columns inside container
 + `.cols-start` - left align / flexbox start align columns
@@ -116,4 +137,9 @@ The class `.container` provides the flexbox wrapper for the columns.
 + `.cols-sp-between` - arrange columns with equal space between (pushed right to edges of container)
 + `.cols-sp-around` - arrange columns with equal space around (including between edge of container and edge of column)
 + `.reverse-row` - reverse direction of columns from html structure
+
+These classes can also be used at separate breakpoints:
++`.cols-middle-sm` - vertically centre align columns when viewport is bigger than `@sm`
+
+
 
