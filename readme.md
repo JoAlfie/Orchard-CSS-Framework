@@ -199,7 +199,7 @@ Like Flexbox Grid & Bootstrap, columns can be offset by `x` columns: `.col-{brea
 
 The class `.col-{breakpoint}-auto` will size columns based on the number in the container. To set a minimum width on these columns (for example, to have four columns per row, but have the columns fill all available space if there are less than four) use the class `.col-{breakpoint}-min-{x}`
 
-### Utility Classes:
+### Utility Classes
 
 These classes can be used on any element, for breakpoint-specific controls.
 
@@ -214,4 +214,12 @@ These classes are not breakpoint specific:
 
 + `.video-wrapper` - a wrapper to create responsive video embeds, with a loading gif background image. 
 + `.sr-only` - visually hidden, but can be read by screen-reader technology. Useful for labels on inputs with placeholder text, or image-based buttons. 
+
+### Typeography
+
+The html font size is set to 62.5% so that sizing can be set in REM based on 10px sizing - aka 1.5rem = 15px. 
+
+Body font size is 16px on mobile and 18px above the small breakpoint.
+
+All headings (h1-h6) have set sizes for consistency. They also have corresponding classes ( e.g. `.h1`), so that heading styles can be used while adhearding to proper document structure (e.g. two headings can have h1 styling, but only have one h1 on a page).
 
