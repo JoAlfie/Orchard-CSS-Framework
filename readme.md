@@ -32,8 +32,8 @@ Flexbox is buggy, Bootstrap is bloated - meet the answer.
 
 *Instructions given for a Symphony project*
 
-1. Copy .less and .css files into workspace/assets/css & .js files into workspace/assets/js
-2. Link up the files in the `<head>` tags as usual
+1\. Copy .less and .css files into workspace/assets/css & .js files into workspace/assets/js
+2\. Link up the files in the `<head>` tags as usual
 
 ```
 <head>
@@ -47,7 +47,7 @@ Flexbox is buggy, Bootstrap is bloated - meet the answer.
 </head>
 ```
 
-3. Add site-specific variables to styles.less. Variables can be used across .less files, for easy consistency
+3\. Add site-specific variables to styles.less. Variables can be used across .less files, for easy consistency
 ```
 @breen: #48c4d3;
 
@@ -59,14 +59,14 @@ Flexbox is buggy, Bootstrap is bloated - meet the answer.
 	border: solid 3px @breen;
 }
 ```
-4. Update exisiting variables to match site design
+4\. Update exisiting variables to match site design
 ```
 @mainfontcolor: @dark-grey;
 @mainfontfamily: 'Arial', sans-serif;
 @linkcolor: @breen;
 ```
 
-5. Create new .less files for all other site styles, and link them in Imports at the top of styles.less
+5\. Create new .less files for all other site styles, and link them in Imports at the top of styles.less
 ```
 // IMPORTS
 @import "normalize";
@@ -158,11 +158,32 @@ These classes can also be used at separate breakpoints, for example...
 + `.cols-middle-sm` - vertically centre align columns when viewport is bigger than `@sm`
 + `.reverse-row-lg` - reverse direction of columns when viewport is bigger than `@lg`
 
++ `.cols-middle-{breakpoint}`
++ `.cols-start-{breakpoint}`
++ `.cols-end-{breakpoint}`
++ `.cols-center-{breakpoint}`
++ `.cols-sp-between-{breakpoint}`
++ `.cols-sp-around-{breakpoint}`
++ `.reverse-row-{breakpoint}`
+
 **Width Utility classes for containers:**
 
 + `.full-width` - override max-width and make container full-width
 + `.full-width-{breakpoint}` - make container full-width from specific breakpoint, e.g. `.full-width-md`
 + `.container-width-{breakpoint}` - override full-width class from previous breakpoint and restrict container to max-width e.g. `.container-width-xl`
 
+#### Columns:
 
+The series of classes beginning with `.col-` provides the sizing wrappers for content.
 
+**General Column Sizing:**
+
+Column classes take the format `.col-{breakpoint}-{x}` where `{x}` goes from one to `@col-no` (default 12). This is the same format as Flexbox Grid & Bootstrap.
+
+**Column Offsets:**
+
+Like Flexbox Grid & Bootstrap, columns can be offset by `x` columns: `.col-{breakpoint}-offset-{x}`
+
+**Auto Size Columns:**
+
+The class `.col-{breakpoint-auto}` will size columns based on the number in the container. To set a minimum width on these columns (for example, to have four columns per row, but have the columns fill all available space if there are less than four) use the class `.col-{breakpoint}-min-{x}`
