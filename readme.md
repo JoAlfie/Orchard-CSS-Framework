@@ -123,6 +123,7 @@ The grid starts at mobile, and extra css can be added as the screen size increas
 	/* this will override .class-sm */
 	.class-md {}
 }
+```
 
 #### Containers:
 
