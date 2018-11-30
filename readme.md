@@ -133,10 +133,11 @@ The grid starts at mobile, and extra css can be added as the screen size increas
 }
 ```
 The standard breakpoints are as follows: 
-+ *sm* : 576px
-+ *md* : 768px
-+ *lg* : 992px
-+ *xl* : 1200px
+
++ **sm** : 576px
++ **md** : 768px
++ **lg** : 992px
++ **xl** : 1200px
 
 #### Containers:
 
