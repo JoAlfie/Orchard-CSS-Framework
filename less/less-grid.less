@@ -144,7 +144,7 @@ header, section, footer {
 }
 .generate-container(@bp, @mw){
 	.container {
-		&.container-width {
+		&.container-width-@{bp} {
 			max-width: @mw;
 		}
 	}

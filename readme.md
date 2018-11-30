@@ -143,7 +143,7 @@ The standard breakpoints are as follows:
 
 The class `.container` provides the flexbox wrapper for the columns.
 
-Utility classes for containers:
+**Utility classes for containers:**
 
 + `.cols-middle` - vertically centre align columns inside container
 + `.cols-start` - left align / flexbox start align columns
@@ -153,9 +153,16 @@ Utility classes for containers:
 + `.cols-sp-around` - arrange columns with equal space around (including between edge of container and edge of column)
 + `.reverse-row` - reverse direction of columns from html structure
 
-These classes can also be used at separate breakpoints:
+These classes can also be used at separate breakpoints, for example...
 
 + `.cols-middle-sm` - vertically centre align columns when viewport is bigger than `@sm`
++ `.reverse-row-lg` - reverse direction of columns when viewport is bigger than `@lg`
+
+**Width Utility classes for containers:**
+
++ `.full-width` - override max-width and make container full-width
++ `.full-width-{breakpoint}` - make container full-width from specific breakpoint, e.g. `.full-width-md`
++ `.container-width-{breakpoint}` - override full-width class from previous breakpoint and restrict container to max-width e.g. `.container-width-xl`
 
 
 
