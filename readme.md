@@ -185,21 +185,18 @@ Like Flexbox Grid & Bootstrap, columns can be offset by `x` columns: `.col-{brea
 
 The class `.col-{breakpoint}-auto` will size columns based on the number in the container. To set a minimum width on these columns (for example, to have four columns per row, but have the columns fill all available space if there are less than four) use the class `.col-{breakpoint}-min-{x}`
 
-#### Utility Classes:
+### Utility Classes:
 
 These classes can be used on any element, for breakpoint-specific controls.
 
-+ `.fw` - sets width and max-width to 100%
-+ `.fw-{breakpoint}` - set 'fw' from specific breakpoint
-
-+ `.text-left` - text align left
-+ `.text-left-{breakpoint}`
-
-+ `.text-right` - text align right
-+ `.text-right-{breakpoint}`
-
-+ `.text-center` - text align center
-+ `.text-center-{breakpoint}`
-
++ `.fw-{breakpoint}` - sets width and max-width to 100%
++ `.text-left-{breakpoint}` - text align left 
++ `.text-right-{breakpoint}` - text align right
++ `.text-center-{breakpoint}` - text align center
 + `.visible-{breakpoint}` - display: block
 + `.hidden-{breakpoint}` - display: none
+
+These classes are not breakpoint specific:
+
++ `.video-wrapper` - a wrapper to create responsive video embeds, with a loading gif background image. 
++ `.sr-only` - visually hidden, but can be read by screen-reader technology. Useful for labels on inputs with placeholder text, or image-based buttons. 
