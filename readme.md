@@ -155,10 +155,7 @@ The class `.container` provides the flexbox wrapper for the columns.
 
 These classes can also be used at separate breakpoints, for example...
 
-+ `.cols-middle-sm` - vertically centre align columns when viewport is bigger than `@sm`
-+ `.reverse-row-lg` - reverse direction of columns when viewport is bigger than `@lg`
-
-+ `.cols-middle-{breakpoint}`
++ `.cols-middle-{breakpoint}` - vertically centre align columns when viewport is bigger than breakpoint, e.g. `.cols-middle-sm`
 + `.cols-start-{breakpoint}`
 + `.cols-end-{breakpoint}`
 + `.cols-center-{breakpoint}`
