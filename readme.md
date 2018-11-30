@@ -123,7 +123,7 @@ The grid starts at mobile, and extra css can be added as the screen size increas
 	/* this class applies to everything bigger than the @sm breakpoint, until it is overridden by the same class at a bigger breakpoint */
 	.class-sm {
 		...
-}
+	}
 }
 @media (min-width: @md) {
 	/* this will override .class-sm */
