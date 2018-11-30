@@ -80,7 +80,7 @@ Flexbox Grid is buggy, Bootstrap is bloated - meet the answer.
 ```
 
 ### The Grid
-The grid is designed to have as flat a HTML structure as possible. Unlike Bootstrap & Flexbox Grid, rows are not needed inside containers. This allows for more flexibility in container width and setup.
+The grid is designed to have as flat a HTML structure as possible - the `.container` class is all you need around your columns.
 
 ```
 <div class="container">
