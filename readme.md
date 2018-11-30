@@ -110,20 +110,33 @@ The grid starts at mobile, and extra css can be added as the screen size increas
 
 ```
 /* applied to everything */
-.universal-class {}
+.universal-class {
+	...
+}
 
 /* xs is the base css, before media queries kick in */
-.class-xs {}
+.class-xs {
+	...
+}
 
 @media (min-width: @sm) {
 	/* this class applies to everything bigger than the @sm breakpoint, until it is overridden by the same class at a bigger breakpoint */
-	.class-sm {}
+	.class-sm {
+		...
+}
 }
 @media (min-width: @md) {
 	/* this will override .class-sm */
-	.class-md {}
+	.class-md {
+		...
+	}
 }
 ```
+The standard breakpoints are as follows: 
++ *sm* : 576px
++ *md* : 768px
++ *lg* : 992px
++ *xl* : 1200px
 
 #### Containers:
 
@@ -140,7 +153,8 @@ Utility classes for containers:
 + `.reverse-row` - reverse direction of columns from html structure
 
 These classes can also be used at separate breakpoints:
-+`.cols-middle-sm` - vertically centre align columns when viewport is bigger than `@sm`
+
++ `.cols-middle-sm` - vertically centre align columns when viewport is bigger than `@sm`
 
 
 
