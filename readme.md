@@ -1,6 +1,6 @@
 # A Simple .Less Based Framework
 
-Flexbox is buggy, Bootstrap is bloated - meet the answer.
+Flexbox Grid is buggy, Bootstrap is bloated - meet the answer.
 
 ## What's included?
 
@@ -214,3 +214,4 @@ These classes are not breakpoint specific:
 
 + `.video-wrapper` - a wrapper to create responsive video embeds, with a loading gif background image. 
 + `.sr-only` - visually hidden, but can be read by screen-reader technology. Useful for labels on inputs with placeholder text, or image-based buttons. 
+
