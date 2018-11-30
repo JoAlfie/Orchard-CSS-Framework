@@ -151,7 +151,7 @@ The variables are as follows:
 + `@col-no` : set number of columns in grid
 + `@col-padding` : left and right padding of columns. Grid gutter is this * 2.
 + `@container` : max width of the container class
-+ `@container-{breakpoint}` : set the max width of the container class at each breakpoint 
++ `@container-width-{breakpoint}` : set the max width of the container class at each breakpoint 
 
 #### Containers:
 
