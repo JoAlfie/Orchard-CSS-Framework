@@ -34,6 +34,7 @@ Flexbox Grid is buggy, Bootstrap is bloated - meet the answer.
 *Instructions given for a Symphony project*
 
 1\. Copy .less and .css files into workspace/assets/css & .js files into workspace/assets/js
+
 2\. Link up the files in the `<head>` tags as usual
 
 ```
