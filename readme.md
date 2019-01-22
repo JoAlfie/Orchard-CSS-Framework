@@ -24,6 +24,7 @@ Flexbox Grid is buggy, Bootstrap is bloated - meet the answer.
 ### Less Framework:
 + styles.less - imports & variables
 + normalize - (https://necolas.github.io/normalize.css/)
++ prefix-utilities.less - utility classes for regularly used styles with vendor prefixes
 + base.less - basics, typeography, general resets
 + less-grid.less  - a simple flexbox-based grid system
 + utilities.less - extra useful snippets
@@ -70,6 +71,7 @@ Flexbox Grid is buggy, Bootstrap is bloated - meet the answer.
 ```
 // IMPORTS
 @import "normalize";
+@import "prefix-utilities";
 @import "base";
 @import "less-grid";
 @import "utilities";
