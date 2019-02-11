@@ -114,7 +114,7 @@ The grid is designed to have as flat a HTML structure as possible - the `.contai
 #### Mobile First Breakpoints:
 The grid starts at mobile, and extra css can be added as the screen size increases. This means less css has to be read for smaller devices.
 
-```less
+```css
 /* applied to everything */
 .universal-class {
 	...
