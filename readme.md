@@ -53,7 +53,7 @@ Flexbox Grid is buggy, Bootstrap is bloated - meet the answer.
 ```
 
 3\. Add site-specific variables to styles.less. Variables can be used across .less files, for easy consistency
-```
+```less
 @breen: #48c4d3;
 
 .breen-class {
