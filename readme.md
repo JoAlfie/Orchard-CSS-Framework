@@ -88,7 +88,7 @@ Flexbox Grid is buggy, Bootstrap is bloated - meet the answer.
 ### The Grid
 The grid is designed to have as flat a HTML structure as possible - the `.container` class is all you need around your columns.
 
-```
+```html
 <div class="container">
 	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
 		<p>Col 1</p>
