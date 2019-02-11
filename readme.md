@@ -53,7 +53,7 @@ Flexbox Grid is buggy, Bootstrap is bloated - meet the answer.
 ```
 
 3\. Add site-specific variables to styles.less. Variables can be used across .less files, for easy consistency
-```less
+```css
 @breen: #48c4d3;
 
 .breen-class {
@@ -239,7 +239,7 @@ Contained in `prefix-utilities.less` -
 If the value options are strings, there will be several classes with the following format: `.property-name_property-value`
 
 e.g.: 
-```
+```css
 .justify-content_space-between { ... }
 .justify-content_space-around { ... }
 .justify-content_center { ... }
@@ -248,7 +248,7 @@ e.g.:
 If the value is an integer (number), there will be one class which takes the integer as an argument.
 
 e.g.:
-```
+```css
 .flex-grow(@x: 1) {
 	-webkit-box-flex: @x;
 	-ms-flex-positive: @x;
@@ -259,14 +259,14 @@ e.g.:
 These utility mixins should be used within .less stylesheets in order to cut down on the amount of typing necessary, not as classes on HTML objects.
 
 e.g.:
-```
+```css
 .a-flex-container {
 	.display_flex();
 	.flex-wrap_wrap();
 }
 ```
 outputs:
-```
+```css
 .a-flex-container {
 	display: -ms-flexbox;
 	display: -webkit-box;
@@ -278,7 +278,7 @@ outputs:
 
 ####Utility mixins can also be used for easy consistency across a project.
 For example, the `.transition()` mixin takes all of the potential transition properties as arguments, with defaults.
-```
+```css
 .transition(@property: all; @duration: @default-transition-time; @timing-function: linear; @delay: 0s) {
 	-webkit-transition: @arguments;
 	-o-transition: @arguments;
@@ -289,7 +289,7 @@ For example, the `.transition()` mixin takes all of the potential transition pro
 The transition mixin can now be used across a project, and if the default changes it only needs to be changed once.
 
 e.g.:
-```
+```css
 .button {
 	.transition();
 
@@ -301,7 +301,7 @@ e.g.:
 }
 ```
 Outputs as:
-```
+```css
 .button {
 	-webkit-transition: all 0.3s linear 0s;
 	-o-transition: all 0.3s linear 0s;
@@ -317,7 +317,7 @@ Outputs as:
 Any of the defaults can be overridden in the mixin call
 
 e.g.: 
-```
+```css
 .button {
 	.transition(@property: background-color);
 	...
@@ -325,7 +325,7 @@ e.g.:
 
 ```
 Outputs as:
-```
+```css
 .button {
 	-webkit-transition: background-color 0.3s linear 0s;
 	-o-transition: background-color 0.3s linear 0s;
