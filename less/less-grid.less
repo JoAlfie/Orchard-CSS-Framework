@@ -46,6 +46,7 @@ header, section, footer {
 }
 
 .full-width { max-width: 100% }
+.fluid-width { width: @container-fluid }
 
 .cols-middle {
 	.align-items_center();
@@ -87,7 +88,10 @@ header, section, footer {
 	max-width: 100%;
 }
 .generate-col-basis(@bp, @n, @i: 1) when (@i =< @n){
-	.col-@{bp}-@{i}{ &:extend(.col-basis); }
+	.col-@{bp}-@{i}{ 
+		&:extend(.col-basis); 
+		img { max-width: 100%; }
+	}
 
 	.generate-col-basis(@bp, @n, (@i + 1));
 }
@@ -131,6 +135,9 @@ header, section, footer {
 	.container {
 		&.container-width-@{bp} {
 			max-width: @mw;
+		}
+		&.fluid-width-@{bp} {
+			width: @container-fluid;
 		}
 	}
 	.full-width-@{bp} {

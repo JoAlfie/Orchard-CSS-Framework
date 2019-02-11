@@ -154,7 +154,8 @@ The variables are as follows:
 + `@col-no` : set number of columns in grid
 + `@col-padding` : left and right padding of columns. Grid gutter is this * 2.
 + `@container` : max width of the container class
-+ `@container-width-{breakpoint}` : set the max width of the container class at each breakpoint 
++ `@container-width-{breakpoint}` : set the max width of the container class at each breakpoint
++ `@container-fluid` : a percentage, the width of containers with the class `.fluid-width` 
 
 #### Containers:
 
@@ -226,3 +227,107 @@ Body font size is 16px on mobile and 18px above the small breakpoint.
 
 All headings (h1-h6) have set sizes for consistency. They also have corresponding classes ( e.g. `.h1`), so that heading styles can be used while adhearding to proper document structure (e.g. two headings can have h1 styling, but only have one h1 on a page).
 
+### Prefix Utilities
+
+For best results, compiled css should be run through [Autoprefixer](https://autoprefixer.github.io/), but these utilities are used in the grid & should make things easier.
+
+Contained in `prefix-utilities.less` -
+
+If the value options are strings, there will be several classes with the following format: `.property-name_property-value`
+
+e.g.: 
+```
+.justify-content_space-between { ... }
+.justify-content_space-around { ... }
+.justify-content_center { ... }
+```
+
+If the value is an integer (number), there will be one class which takes the integer as an argument.
+
+e.g.:
+```
+.flex-grow(@x: 1) {
+	-webkit-box-flex: @x;
+	-ms-flex-positive: @x;
+	flex-grow: @x;
+}
+```
+
+These utility mixins should be used within .less stylesheets in order to cut down on the amount of typing necessary, not as classes on HTML objects.
+
+e.g.:
+```
+.a-flex-container {
+	.display_flex();
+	.flex-wrap_wrap();
+}
+```
+outputs:
+```
+.a-flex-container {
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+```
+
+####Utility mixins can also be used for easy consistency across a project.
+For example, the `.transition()` mixin takes all of the potential transition properties as arguments, with defaults.
+```
+.transition(@property: all; @duration: @default-transition-time; @timing-function: linear; @delay: 0s) {
+	-webkit-transition: @arguments;
+	-o-transition: @arguments;
+	transition: @arguments;
+}
+```
+*(note that `@default-transition-time` is a variable set in `styles.less`)*
+The transition mixin can now be used across a project, and if the default changes it only needs to be changed once.
+
+e.g.:
+```
+.button {
+	.transition();
+
+	background-color: green;
+
+	&:hover {
+		background-color: blue;
+	}
+}
+```
+Outputs as:
+```
+.button {
+	-webkit-transition: all 0.3s linear 0s;
+	-o-transition: all 0.3s linear 0s;
+	transition: all 0.3s linear 0s;
+
+	background-color: green;
+}
+.button:hover {
+	background-color: blue;
+}
+```
+
+Any of the defaults can be overridden in the mixin call
+
+e.g.: 
+```
+.button {
+	.transition(@property: background-color);
+	...
+}
+
+```
+Outputs as:
+```
+.button {
+	-webkit-transition: background-color 0.3s linear 0s;
+	-o-transition: background-color 0.3s linear 0s;
+	transition: background-color 0.3s linear 0s;
+
+	...
+}
+```

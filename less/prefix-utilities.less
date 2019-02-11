@@ -58,3 +58,19 @@
 	-ms-flex-pack: distribute;
 	justify-content: space-around;
 }
+
+.flex-grow(@x: 1) {
+	-webkit-box-flex: @x;
+	-ms-flex-positive: @x;
+	flex-grow: @x;
+}
+.flex-shrink(@x: 1) {
+	-ms-flex-negative: @x;
+	flex-shrink: @x;
+}
+
+.transition(@property: all; @duration: @default-transition-time; @timing-function: linear; @delay: 0s) {
+	-webkit-transition: @arguments;
+	-o-transition: @arguments;
+	transition: @arguments;
+}
