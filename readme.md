@@ -29,6 +29,9 @@ Flexbox Grid is buggy, Bootstrap is bloated - meet the answer.
 + less-grid.less  - a simple flexbox-based grid system
 + utilities.less - extra useful snippets
 
+### Sublime Project:
++ Framework.sublime-project - a sublime text project, to load all the folders into ST & have a nice time
+
 ## How do I use it?
 
 *Instructions given for a Symphony project*
